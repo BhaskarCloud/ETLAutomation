@@ -1,5 +1,8 @@
 import pandas as pd
 
+# Print the Pandas version
+print(pd.__version__)
+
 source =pd.read_csv("Employee.csv",sep=",")
 
 print("Test Case 1: Following are the column names in the source file : \n") 
