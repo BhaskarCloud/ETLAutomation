@@ -5,6 +5,10 @@ print(pd.__version__)
 
 source =pd.read_csv("Employee.csv",sep=",")
 
+print("Test Case 0: return the all information of your dataset : \n") 
+print(source.info) 
+print("\n")
+
 print("Test Case 1: Following are the column names in the source file : \n") 
 print(source.columns) 
 print("\n")

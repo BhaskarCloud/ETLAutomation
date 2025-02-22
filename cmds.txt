@@ -15,3 +15,5 @@ mvn clean test
 mvn clean test -DBrowser=Chrome
 
 mvn clean test -DBrowser=Edge
+
+4XN7HNMDR6OR7UYPXZDUUIS7VIAHRAPJ
