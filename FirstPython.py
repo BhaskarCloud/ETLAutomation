@@ -57,6 +57,23 @@ print("Test Case 12: Sample ( bottom 5 ) records from source file \n")
 print(source.tail())
 print("\n")
 
+# Randomly select n rows
+print(source.sample(3))
+
+# Select top 2 Highest Salary
+print(source.nlargest(2, 'Salary'))
+
+# Select the Salary > 2000
+print(source[source.Salary > 2000])
+
+# Select the FRUITS name
+print(source['emp_name'])
+
+# Select the FRUITS name and
+# their corresponding PRICE
+print(source[['emp_name', 'Salary']])
+
+
 # Sorting in Ascending order
 print("Test Case 13: Sorting emp_name in Ascending order \n")
 print(source.sort_values('emp_name', ascending=True))
@@ -81,3 +98,20 @@ source.reset_index(drop=True, inplace=True)
 print(source)
 print("\n")
 print("TEST COMPLETED____\n")
+
+# Gather columns into rows.
+print(pd.melt(source))
+
+# Pivot table
+pivot = source.pivot(columns='emp_name',
+                 values=['dept_name', 'Salary'])
+print(pivot)
+
+# Drop the Salary Columns
+source1 = source.drop(columns=['Salary'], axis=1)
+print(source1)
+
+# Drop 2nd and 4th rows
+source2 = source.drop([1, 3], axis=0)
+print(source2)
+
