@@ -1,0 +1,15 @@
+pytest .\sanitycheck.py -v -s
+
+python -m pytest ETLsmoketest.py
+
+
+
+C:/Users/bhask/AppData/Local/Programs/Python/Python313/python.exe c:/Users/bhask/Desktop/Python/FirstPython.py
+
+C:/Users/bhask/AppData/Local/Programs/Python/Python313/python.exe -m pytest ETLsmoketest.py
+
+cd C:\mavenjenkins-master
+mvn clean test
+
+
+mvn clean test -DBrowser=Chrome
