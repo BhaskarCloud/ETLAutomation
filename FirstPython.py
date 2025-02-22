@@ -53,15 +53,31 @@ print ("Test Case 11: Sample ( top 5 ) records from source file \n")
 print(source.head())
 print("\n")
 
-
 print("Test Case 12: Sample ( bottom 5 ) records from source file \n")
 print(source.tail())
 print("\n")
 
-
-
 # Sorting in Ascending order
-print("Test Case 13: Sorting in Ascending order \n")
+print("Test Case 13: Sorting emp_name in Ascending order \n")
 print(source.sort_values('emp_name', ascending=True))
+print("\n")
+
+# Sorting in Descending order
+print("Test Case 14: Sorting emp_name in Descending order \n")
+print(source.sort_values('emp_name', ascending=False))
+print("\n")
+
+# Sorting by Index
+print("Test Case 15: Sorting by Index in Descending order \n")
+print(source.sort_index(ascending=False))
+print("\n")
+
+# Sorting by Index
+# Reset the indexes to default
+# inplace = True will make changes to the orginal dataframe
+# drop =True will drop the initial indexes
+print("Test Case 16: Reset the indexes to default \n")
+source.reset_index(drop=True, inplace=True)
+print(source)
 print("\n")
 print("TEST COMPLETED____\n")
