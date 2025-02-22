@@ -99,20 +99,14 @@ print(source)
 print("\n")
 print("TEST COMPLETED____\n")
 
-# Renaming
-df = pd.read_csv("fruits.csv",sep=",")
-print(df)
-df.rename(columns={'Fruits': 'FRUITS',
-                   'Quantity': 'QUANTITY',
-                   'Price': 'PRICE'},
-          inplace=True)
-print(df)
 
+df = pd.read_csv("fruits.csv",sep=",")
 # Gather columns into rows.
 print(pd.melt(df))
 
 # Pivot table
-pivot = df.pivot(columns='FRUITS',values=['PRICE', 'QUANTITY'])
+pivot = df.pivot(columns='FRUITS',
+                 values=['PRICE', 'QUANTITY'])
 print(pivot)
 
 
@@ -162,10 +156,8 @@ print(df.query('PRICE>70'))
 # Price >50 & QUANTITY <30
 print(df.query('PRICE>50 and QUANTITY<30'))
 
-
 # FRUITS name start with 'M'
-#print(df.query('FRUITS.str.startswith("Ma")'))
-#print(df.query("FRUITS.str.startswith('M')"))
+print(df.query("FRUITS.str.startswith('M')", ))
 
 #Combine Two data sets
 #Create 1st dataframe
@@ -210,9 +202,9 @@ data = {'FRUITS': ['Grapes', 'Pineapple'],
 df1 = pd.DataFrame(data)
 
 # Concatenate df and df1
-df2 = pd.concat([df, df1], axis=0,
+df3 = pd.concat([df2, df1], axis=0,
                 ignore_index=True)
-print(df2)
+print(df3)
 
 # Column-wise Concatenation having the same column name
 data = {'DISCOUNT': [5, 7, 10, 8, 6]}
@@ -231,13 +223,11 @@ print(df.describe())
 
 # For object datatype
 print(df.describe(include=['O']))
-
 # Check the unique values in the dataset
-df.FRUITS.unique()  
-
+df.FRUITS.unique()
 
 # Count the total unique values
-df.FRUITS.value_counts()   
+df.FRUITS.value_counts()
 
 #Sum values
 print(df['PRICE'].sum())
@@ -267,7 +257,6 @@ df['PRICE'].std()
 # Quantile
 df['PRICE'].quantile([0, 0.25, 0.75, 1])
 
-
 # Apply any custom function
 def summation(col):
     if col.dtypes != 'int64':
@@ -276,16 +265,13 @@ def summation(col):
         return col.sum()
 
 
-df.apply(summation)
+df1.apply(summation)
 
 # Covariance
-#print(df.cov(numeric_only=True))
-print(df.cov())
-
+print(df.cov(numeric_only=True))
 
 # Correlation
-#print(df.corr(numeric_only=True))
-print(df.corr())
+print(df.corr(numeric_only=True))
 
 # Missing Values
 # Check for null values using isnull() function.
@@ -307,11 +293,12 @@ print(df)
 
 # Drop the null values
 df.dropna(inplace=True)
-
 # Add a column to the Existing dataset
 
 # Values to add
-Origin = pd.Series(data=['BH', 'J&K','BH', 'MP','WB', 'WB'])
+Origin = pd.Series(data=['BH', 'J&K',
+                         'BH', 'MP',
+                         'WB', 'WB'])
 
 # Add a column in dataset
 df['Origin'] = Origin
@@ -350,7 +337,6 @@ df.plot.bar(x='FRUITS', y=['QUANTITY', 'PRICE', 'DISCOUNT'])
 
 #Bar Plot with Pandas
 
-
 # Histogram with pandas
 # plot.hist() methods is used to create a histogram.
 df['QUANTITY'].plot.hist(bins=3)
@@ -362,6 +348,7 @@ df['QUANTITY'].plot.hist(bins=3)
 df.plot.scatter(x='PRICE', y='DISCOUNT')
 
 #Scatter Plot with Pandas
+
 #Pie Chart with Pandas
 #plot.pie() methods used to create pie chart.
 grouped = df.groupby(['Origin'])
