@@ -279,13 +279,13 @@ def summation(col):
 df.apply(summation)
 
 # Covariance
-#print(df.cov(numeric_only=True))
-print(df.cov())
+print(df.cov(numeric_only=True))
+#print(df.cov())
 
 
 # Correlation
-#print(df.corr(numeric_only=True))
-print(df.corr())
+print(df.corr(numeric_only=True))
+#print(df.corr())
 
 # Missing Values
 # Check for null values using isnull() function.
