@@ -337,7 +337,7 @@ print(df)
 #Outlier Detection using Box plot
 #we can use a boxplot for Detection of the outliers.
 
-
+"""
 
 
 # Box plot
@@ -367,7 +367,7 @@ df.plot.scatter(x='PRICE', y='DISCOUNT')
 grouped = df.groupby(['Origin'])
 grouped.sum().plot.pie(y='Paid_Price', subplots=True)
 
-"""
+
 Code snippet:
 
 
