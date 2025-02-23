@@ -60,8 +60,9 @@ print("\n")
 # Randomly select n rows
 print(source.sample(3))
 
-# Select top 2 Highest Salary
+print("Test Case 14: Select top 2 Highest Salary \n")
 print(source.nlargest(2, 'Salary'))
+print("\n")
 
 # Select the Salary > 2000
 print(source[source.Salary > 2000])
