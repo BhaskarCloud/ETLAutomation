@@ -57,8 +57,9 @@ print("Test Case 12: Sample ( bottom 5 ) records from source file \n")
 print(source.tail())
 print("\n")
 
-# Randomly select n rows
+print("Test Case 13: Randomly select n rows \n")
 print(source.sample(3))
+print("\n")
 
 print("Test Case 14: Select top 2 Highest Salary \n")
 print(source.nlargest(2, 'Salary'))
