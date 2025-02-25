@@ -1,12 +1,12 @@
-﻿emp_no,emp_name,dept_name,Salary
-1,Adam,IT,1000
-1,Adam,IT,1000
-2,Peter,,4000
-3,Christopher,Finance,1000
-4,Christopher,Finance,1000
-4,Alan,Sales,
-5,Mayank,HR,4000
-6,Rakesh,Sales,4000
-7,Mathew,Finance,4000
-8,Bhaskar,IT,14000
-9,Tina,HR,2000
+"emp_no	emp_name	dept_name	Salary"
+"1	Adam	IT	1000"
+"11	Adam	IT	1000"
+"2	Peter		4000"
+"3	Christopher	Finance	1000"
+"4	Christopher	Finance	1000"
+"14	Alan	Sales	"
+"5	Mayank	HR	4000"
+"6	Rakesh	Sales	4000"
+"7	Mathew	Finance	4000"
+"8	Bhaskar	IT	14000"
+"9	Tina	HR	2000"
